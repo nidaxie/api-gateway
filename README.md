@@ -7,6 +7,7 @@ Amaç, belirli bir endpoint üzerinde rate limiting (istek sınırlama) mekanizm
 📌 Proje Amacı
 
 Bu projede:
+
 - Laravel API endpoint oluşturuldu
 - Throttle middleware kullanıldı
 - 1 dakika içinde maksimum 5 istek sınırı getirildi
@@ -14,12 +15,14 @@ Bu projede:
 - Postman ile test edildi
 
 🛠 Kullanılan Teknolojiler
+
 - PHP
 - Laravel
 - Postman (API testi için)
 - Git & GitHub
 
 ⚙️ Kurulum
+
 Projeyi klonlayın:
 bash
 git clone https://github.com/nidaxie/api-gateway.git
@@ -48,12 +51,14 @@ Anlamı:
 6. istekte 429 hata
 
 🧪 Test Etme (Postman)
+
 GET isteği oluşturun
 URL: http://127.0.0.1:8000/api/gateway
 6 kez hızlıca gönderin
 istekte 429 hatasını gözlemleyin
 
 📚 Öğrenilen Konular
+
 Laravel Route yapısı
 Middleware kullanımı
 Rate limiting mantığı
@@ -62,5 +67,6 @@ Postman ile API test etme
 Git versiyon kontrolü
 
 👩‍💻 Geliştirici
+
 Nida Oruç
 GitHub: https://github.com/nidaxie
