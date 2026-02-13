@@ -12,7 +12,7 @@ Bu projede:
 - Laravel API endpoint oluşturuldu
 - Throttle middleware kullanıldı
 - 1 dakika içinde maksimum 5 istek sınırı getirildi
-- 6. istekte **429 (Too Many Requests)** hatası döndürülmesi sağlandı
+-  6. istekte **429 (Too Many Requests)** hatası döndürülmesi sağlandı
 - Postman ile test edildi
 
 🛠 Kullanılan Teknolojiler
