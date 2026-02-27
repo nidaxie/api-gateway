@@ -34,25 +34,26 @@ Clone the project:
 
 ``bash
 git clone https://github.com/nidaxie/api-gateway.git
+
 cd api-gateway
 
 Install dependencies:
-
 composer install
 
 Create the .env file:
-
 cp .env.example .env
 
 Generate the application key:
-
 php artisan key:generate
 
 Start the server:
-
 php artisan serve
-🔗 API Endpoints
+
+---
+
+## 🔗 API Endpoints
 Test Gateway
+
 GET /api/gateway
 
 Example URL: http://127.0.0.1:8000/api/gateway
@@ -71,14 +72,16 @@ Request 6 → 429 Too Many Requests
   "message": "Too Many Attempts."
 }
 Cariler CRUD
-Method	Endpoint	Description
-GET	/api/cariler	List all
-POST	/api/cariler	Create new
-GET	/api/cariler/{id}	Show details
-PUT	/api/cariler/{id}	Update
-DELETE	/api/cariler/{id}	Delete
+    Method	Endpoint	Description
+    GET	/api/cariler	List all
+    POST	/api/cariler	Create new
+    GET	/api/cariler/{id}	Show details
+    PUT	/api/cariler/{id}	Update
+    DELETE	/api/cariler/{id}	Delete
 
 Note: All requests require the X-API-KEY header.
+
+---
 
 🧪 Testing (Postman)
 
@@ -87,6 +90,9 @@ Create a GET request to /api/gateway
 Send it 6 times quickly to test rate limiting
 
 Test Cariler CRUD endpoints using X-API-KEY header
+
+---
+
 
 📚 Learned Topics
 
@@ -103,6 +109,9 @@ HTTP status codes
 API testing with Postman
 
 Git version control
+
+---
+
 
 👩‍💻 Developer
 
