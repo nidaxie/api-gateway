@@ -62,15 +62,15 @@ Rate Limiting: 5 requests per minute
 
 Requests 1–5 → 200 OK
 
-{
-  "message": "Gateway passed"
-}
+    {
+      "message": "Gateway passed"
+    }
 
 Request 6 → 429 Too Many Requests
 
-{
-  "message": "Too Many Attempts."
-}
+    {
+      "message": "Too Many Attempts."
+    }
 
 Cariler CRUD
 
@@ -98,19 +98,19 @@ Test Cariler CRUD endpoints using X-API-KEY header
 
 📚 Learned Topics
 
-Laravel route structure
+-Laravel route structure
 
-Middleware usage
+-Middleware usage
 
-Rate limiting concepts
+-Rate limiting concepts
 
-CRUD endpoint design
+-CRUD endpoint design
 
-HTTP status codes
+-HTTP status codes
 
-API testing with Postman
+-API testing with Postman
 
-Git version control
+-Git version control
 
 ---
 
