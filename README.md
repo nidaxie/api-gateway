@@ -1,93 +1,110 @@
-🚀 Laravel API Gateway - Rate Limiting Example
+# 🚀 Laravel API Gateway - Rate Limiting Example
 
-Bu proje, Laravel kullanılarak geliştirilmiş basit bir API Gateway örneğidir.
+This project is a simple API Gateway example built with Laravel.  
 
-Amaç, belirli bir endpoint üzerinde rate limiting (istek sınırlama) mekanizmasını uygulamak ve test etmektir.
+The goal is to implement and test a **rate limiting** mechanism on specific endpoints.
 
+---
 
-📌 Proje Amacı
+## 📌 Project Purpose
 
-Bu projede:
+In this project:
 
-- Laravel API endpoint oluşturuldu
-- Throttle middleware kullanıldı
-- 1 dakika içinde maksimum 5 istek sınırı getirildi
-- Altıncı istekte **429 (Too Many Requests)** hatası döndürülmesi sağlandı
-- Postman ile test edildi
+- Laravel API endpoints are created  
+- Throttle middleware is applied  
+- Maximum 5 requests per minute  
+- 6th request returns **429 (Too Many Requests)**  
+- Tested with Postman  
+- **Cariler CRUD endpoints** added (list, create, update, delete)  
 
-🛠 Kullanılan Teknolojiler
+---
 
-- PHP
-- Laravel
-- Postman (API testi için)
-- Git & GitHub
+## 🛠 Technologies Used
 
-⚙️ Kurulum
+- PHP  
+- Laravel  
+- Postman (for API testing)  
+- Git & GitHub  
 
-Projeyi klonlayın:
+---
 
-bash
+## ⚙️ Setup
 
+Clone the project:
+
+```bash
 git clone https://github.com/nidaxie/api-gateway.git
-
 cd api-gateway
 
-Bağımlılıkları yükleyin: composer install
+Install dependencies:
 
-.env dosyasını oluşturun: cp .env.example .env
+composer install
 
-Uygulama key üretin: php artisan key:generate
+Create the .env file:
 
-Sunucuyu başlatın: php artisan serve
+cp .env.example .env
 
-🔗 API Endpoint
+Generate the application key:
 
-    GET /api/gateway
-    
-    Örnek URL: http://127.0.0.1:8000/api/gateway
-    
-🛡 Rate Limiting Yapısı
+php artisan key:generate
 
-Route üzerinde şu middleware kullanılmıştır:
+Start the server:
 
-Route::middleware('throttle:5,1')->get('/gateway', function () {
-    return response()->json([
-        "message" => "Gateway geçti"
-    ]);
-});
+php artisan serve
+🔗 API Endpoints
+Test Gateway
+GET /api/gateway
 
-Anlamı:
+Example URL: http://127.0.0.1:8000/api/gateway
 
-1 dakika içinde maksimum 5 istek
+Rate Limiting: 5 requests per minute
 
-6. istekte 429 hata
+Requests 1–5 → 200 OK
 
-🧪 Test Etme (Postman)
+{
+  "message": "Gateway passed"
+}
 
-GET isteği oluşturun
+Request 6 → 429 Too Many Requests
 
-URL: http://127.0.0.1:8000/api/gateway
+{
+  "message": "Too Many Attempts."
+}
+Cariler CRUD
+Method	Endpoint	Description
+GET	/api/cariler	List all
+POST	/api/cariler	Create new
+GET	/api/cariler/{id}	Show details
+PUT	/api/cariler/{id}	Update
+DELETE	/api/cariler/{id}	Delete
 
-6 kez hızlıca gönderin
+Note: All requests require the X-API-KEY header.
 
-istekte 429 hatasını gözlemleyin
+🧪 Testing (Postman)
 
-📚 Öğrenilen Konular
+Create a GET request to /api/gateway
 
-Laravel Route yapısı
+Send it 6 times quickly to test rate limiting
 
-Middleware kullanımı
+Test Cariler CRUD endpoints using X-API-KEY header
 
-Rate limiting mantığı
+📚 Learned Topics
 
-HTTP status kodları
+Laravel route structure
 
-Postman ile API test etme
+Middleware usage
 
-Git versiyon kontrolü
+Rate limiting concepts
 
-👩‍💻 Geliştirici
+CRUD endpoint design
+
+HTTP status codes
+
+API testing with Postman
+
+Git version control
+
+👩‍💻 Developer
 
 Nida Oruç
-
 GitHub: https://github.com/nidaxie
