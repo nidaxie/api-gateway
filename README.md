@@ -32,7 +32,7 @@ In this project:
 
 Clone the project:
 
-```bash
+``bash
 git clone https://github.com/nidaxie/api-gateway.git
 cd api-gateway
 
