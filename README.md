@@ -38,23 +38,27 @@ git clone https://github.com/nidaxie/api-gateway.git
 cd api-gateway
 
 Install dependencies:
-composer install
+
+    composer install
 
 Create the .env file:
-cp .env.example .env
+
+    cp .env.example .env
 
 Generate the application key:
-php artisan key:generate
+
+    php artisan key:generate
 
 Start the server:
-php artisan serve
+
+    php artisan serve
 
 ---
 
 ## 🔗 API Endpoints
 Test Gateway
 
-GET /api/gateway
+    GET /api/gateway
 
 Example URL: http://127.0.0.1:8000/api/gateway
 
@@ -87,30 +91,30 @@ Note: All requests require the X-API-KEY header.
 
 🧪 Testing (Postman)
 
-Create a GET request to /api/gateway
+- Create a GET request to /api/gateway
 
-Send it 6 times quickly to test rate limiting
+- Send it 6 times quickly to test rate limiting
 
-Test Cariler CRUD endpoints using X-API-KEY header
+- Test Cariler CRUD endpoints using X-API-KEY header
 
 ---
 
 
 📚 Learned Topics
 
--Laravel route structure
+- Laravel route structure
 
--Middleware usage
+- Middleware usage
 
--Rate limiting concepts
+- Rate limiting concepts
 
--CRUD endpoint design
+- CRUD endpoint design
 
--HTTP status codes
+- HTTP status codes
 
--API testing with Postman
+- API testing with Postman
 
--Git version control
+- Git version control
 
 ---
 
