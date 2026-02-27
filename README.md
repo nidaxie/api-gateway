@@ -71,7 +71,9 @@ Request 6 → 429 Too Many Requests
 {
   "message": "Too Many Attempts."
 }
+
 Cariler CRUD
+
     Method	Endpoint	Description
     GET	/api/cariler	List all
     POST	/api/cariler	Create new
